@@ -11,8 +11,8 @@ import static android.icu.lang.UCharacter.GraphemeClusterBreak.T;
 
 public class MatchControlActivity extends Activity {
 
-    String team1 = "BRA";
-    String team2 = "USA";
+    String team1 = " BRA";
+    String team2 = " USA";
 
     int totalSingleShotsTeam1;
     int totalDoubleShotsTeam1;
@@ -33,9 +33,8 @@ public class MatchControlActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_match_control);
 
-
+        // used to hide or show imageViewtrophy
         trophy = findViewById(R.id.imageViewtrophy);
-
 
     }// close onCreate
 
@@ -46,13 +45,15 @@ public class MatchControlActivity extends Activity {
     public void increment1Team1(View view){
         display1(++totalPointsTeam1);
         displayTotalSingleShotTeam1(++totalSingleShotsTeam1);
+        Toast.makeText(this, getString(R.string.added_1_point) + team1, Toast.LENGTH_SHORT).show();
     }
     public void decrement1Team1(View view){
         if (totalPointsTeam1 <= 0){
-            Toast.makeText(this, "You can not set less than 0 points.", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, R.string.warning_less_than_zero_points, Toast.LENGTH_SHORT).show();
         }else {
             display1(--totalPointsTeam1);
             displayTotalSingleShotTeam1(--totalSingleShotsTeam1);
+            Toast.makeText(this, getString(R.string.subtracted_1_point) + team1, Toast.LENGTH_SHORT).show();
         }
     }
 
@@ -60,13 +61,15 @@ public class MatchControlActivity extends Activity {
     public void increment2Team1(View view){
         display1(totalPointsTeam1 = totalPointsTeam1 + 2);
         displayTotalDoubleShotTeam1(++totalDoubleShotsTeam1);
+        Toast.makeText(this, getString(R.string.added_2_points) + team1, Toast.LENGTH_SHORT).show();
     }
     public void decrement2Team1(View view){
         if (totalPointsTeam1 <= -1){
-            Toast.makeText(this, "You can not set less than 0 points.", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, R.string.warning_less_than_zero_points, Toast.LENGTH_SHORT).show();
         }else {
             display1(totalPointsTeam1 = totalPointsTeam1 - 2);
             displayTotalDoubleShotTeam1(--totalDoubleShotsTeam1);
+            Toast.makeText(this, getString(R.string.subtracted_2_points) + team1, Toast.LENGTH_SHORT).show();
         }
     }
 
@@ -74,25 +77,29 @@ public class MatchControlActivity extends Activity {
     public void increment3Team1(View view){
         display1(totalPointsTeam1 = totalPointsTeam1 + 3);
         displayTotalTripleShotTeam1(++totalTripleShotsTeam1);
+        Toast.makeText(this, getString(R.string.added_3_points) + team1, Toast.LENGTH_SHORT).show();
     }
     public void decrement3Team1(View view){
         if (totalPointsTeam1 <= -1){
-            Toast.makeText(this, "You can not set less than 0 points.", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, R.string.warning_less_than_zero_points, Toast.LENGTH_SHORT).show();
         }else {
             display1(totalPointsTeam1 = totalPointsTeam1 - 3);
             displayTotalTripleShotTeam1(--totalTripleShotsTeam1);
+            Toast.makeText(this, getString(R.string.subtracted_3_points) + team1, Toast.LENGTH_SHORT).show();
         }
     }
 
     // FAULTS TEAM 1
     public void incrementFaultTeam1(View view){
         displayFaults1(++totalFaultsTeam1);
+        Toast.makeText(this, getString(R.string.added_1_fault) + team1, Toast.LENGTH_SHORT).show();
     }
     public void decrementFaultTeam1(View view){
         if (totalFaultsTeam1 <= 0){
-            Toast.makeText(this, "You can not set less than 0 faults.", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, R.string.warning_less_than_zero_faults, Toast.LENGTH_SHORT).show();
         }else {
             displayFaults1(--totalFaultsTeam1);
+            Toast.makeText(this, getString(R.string.subtracted_1_fault) + team1, Toast.LENGTH_SHORT).show();
         }
     }
 
@@ -130,13 +137,15 @@ public class MatchControlActivity extends Activity {
     public void increment1Team2(View view){
         display2(++totalPointsTeam2);
         displayTotalSingleShotTeam2(++totalSingleShotsTeam2);
+        Toast.makeText(this, getString(R.string.added_1_point) + team2, Toast.LENGTH_SHORT).show();
     }
     public void decrement1Team2(View view){
         if (totalPointsTeam2 <= 0){
-            Toast.makeText(this, "You can not set less than 0 points.", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this,R.string.warning_less_than_zero_points, Toast.LENGTH_SHORT).show();
         }else {
             display2(--totalPointsTeam2);
             displayTotalSingleShotTeam2(--totalSingleShotsTeam2);
+            Toast.makeText(this, getString(R.string.subtracted_1_point) + team2, Toast.LENGTH_SHORT).show();
         }
     }
 
@@ -144,13 +153,15 @@ public class MatchControlActivity extends Activity {
     public void increment2Team2(View view){
         display2(totalPointsTeam2 = totalPointsTeam2 + 2);
         displayTotalDoubleShotTeam2(++totalDoubleShotsTeam2);
+        Toast.makeText(this, getString(R.string.added_2_points) + team2, Toast.LENGTH_SHORT).show();
     }
     public void decrement2Team2(View view){
         if (totalPointsTeam2 <= -1){
-            Toast.makeText(this, "You can not set less than 0 points.", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, R.string.warning_less_than_zero_points, Toast.LENGTH_SHORT).show();
         }else {
             display2(totalPointsTeam2 = totalPointsTeam2 - 2);
             displayTotalDoubleShotTeam2(--totalDoubleShotsTeam2);
+            Toast.makeText(this, getString(R.string.subtracted_2_points) + team2, Toast.LENGTH_SHORT).show();
         }
     }
 
@@ -158,25 +169,29 @@ public class MatchControlActivity extends Activity {
     public void increment3Team2(View view){
         display2(totalPointsTeam2 = totalPointsTeam2 + 3);
         displayTotalTripleShotTeam2(++totalTripleShotsTeam2);
+        Toast.makeText(this, getString(R.string.added_3_points) + team2, Toast.LENGTH_SHORT).show();
     }
     public void decrement3Team2(View view){
         if (totalPointsTeam2 <= -1){
-            Toast.makeText(this, "You can not set less than 0 points.", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, R.string.warning_less_than_zero_points, Toast.LENGTH_SHORT).show();
         }else {
             display2(totalPointsTeam2 = totalPointsTeam2 - 3);
             displayTotalTripleShotTeam2(--totalTripleShotsTeam2);
+            Toast.makeText(this, getString(R.string.subtracted_3_points) + team2, Toast.LENGTH_SHORT).show();
         }
     }
 
     // FAULTS TEAM 2
     public void incrementFaultTeam2(View view){
         displayFaults2(++totalFaultsTeam2);
+        Toast.makeText(this, getString(R.string.added_1_fault) + team2, Toast.LENGTH_SHORT).show();
     }
     public void decrementFaultTeam2(View view){
         if (totalFaultsTeam2 <= 0){
-            Toast.makeText(this, "You can not set less than 0 faults.", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, R.string.warning_less_than_zero_faults, Toast.LENGTH_SHORT).show();
         }else {
             displayFaults2(--totalFaultsTeam2);
+            Toast.makeText(this, getString(R.string.subtracted_1_fault) + team2, Toast.LENGTH_SHORT).show();
         }
     }
 
@@ -219,7 +234,7 @@ public class MatchControlActivity extends Activity {
                 displayWinner(team2);
             }else{
                 // setText Message Draw
-                displayWinner("The match is draw");
+                displayWinner(getString(R.string.warning_draw));
                 trophy.setVisibility(View.INVISIBLE);
             }
     }

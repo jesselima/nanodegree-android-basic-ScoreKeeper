@@ -1,3 +1,16 @@
 <resources>
     <string name="app_name">Score Keeper</string>
+    <string name="warning_less_than_zero_points">You can not set less than 0 points!</string>
+    <string name="warning_less_than_zero_faults">You can not set less than 0 faults!</string>
+    <string name="warning_draw">The match is draw!</string>
+    <string name="added_1_point">You added 1 point to </string>
+    <string name="subtracted_1_point">You subtracted 1 point to </string>
+    <string name="added_2_points">You added 2 points to </string>
+    <string name="subtracted_2_points">You subtracted 2 points to </string>
+    <string name="added_3_points">You added 3 points to </string>
+    <string name="subtracted_3_points">You subtracted 3 points to </string>
+    <string name="added_1_fault">You added 1 fault to </string>
+    <string name="subtracted_1_fault">You subtracted 1 fault to </string>
+    <string name="all_data_erased">You erased all data!</string>
+
 </resources>
