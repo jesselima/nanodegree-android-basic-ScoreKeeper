@@ -3,62 +3,84 @@ package com.example.android.scorekeeper;
 import android.app.Activity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-public class MatchControlActivity extends Activity {
+import static android.icu.lang.UCharacter.GraphemeClusterBreak.T;
 
+public class MatchControlActivity extends Activity {
 
     String team1 = "BRA";
     String team2 = "USA";
 
+    int totalSingleShotsTeam1;
+    int totalDoubleShotsTeam1;
+    int totalTripleShotsTeam1;
     int totalPointsTeam1;
     int totalFaultsTeam1;
 
+    int totalSingleShotsTeam2;
+    int totalDoubleShotsTeam2;
+    int totalTripleShotsTeam2;
     int totalPointsTeam2;
     int totalFaultsTeam2;
+
+    ImageView trophy;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_match_control);
+
+
+        trophy = findViewById(R.id.imageViewtrophy);
+
+
     }// close onCreate
 
 
+    // ##### TEAM 2 SECTION #####
 
     // SINGLE SHOTS TEAM 1
     public void increment1Team1(View view){
         display1(++totalPointsTeam1);
+        displayTotalSingleShotTeam1(++totalSingleShotsTeam1);
     }
     public void decrement1Team1(View view){
         if (totalPointsTeam1 <= 0){
             Toast.makeText(this, "You can not set less than 0 points.", Toast.LENGTH_SHORT).show();
         }else {
             display1(--totalPointsTeam1);
+            displayTotalSingleShotTeam1(--totalSingleShotsTeam1);
         }
     }
 
     // DOUBLE SHOTS TEAM 1
     public void increment2Team1(View view){
         display1(totalPointsTeam1 = totalPointsTeam1 + 2);
+        displayTotalDoubleShotTeam1(++totalDoubleShotsTeam1);
     }
     public void decrement2Team1(View view){
         if (totalPointsTeam1 <= -1){
             Toast.makeText(this, "You can not set less than 0 points.", Toast.LENGTH_SHORT).show();
         }else {
             display1(totalPointsTeam1 = totalPointsTeam1 - 2);
+            displayTotalDoubleShotTeam1(--totalDoubleShotsTeam1);
         }
     }
 
     // TRIPLE SHOTS TEAM 1
     public void increment3Team1(View view){
         display1(totalPointsTeam1 = totalPointsTeam1 + 3);
+        displayTotalTripleShotTeam1(++totalTripleShotsTeam1);
     }
     public void decrement3Team1(View view){
         if (totalPointsTeam1 <= -1){
             Toast.makeText(this, "You can not set less than 0 points.", Toast.LENGTH_SHORT).show();
         }else {
             display1(totalPointsTeam1 = totalPointsTeam1 - 3);
+            displayTotalTripleShotTeam1(--totalTripleShotsTeam1);
         }
     }
 
@@ -85,53 +107,64 @@ public class MatchControlActivity extends Activity {
         TextView quantityTextView = findViewById(R.id.totalFaultsTeam1);
         quantityTextView.setText("" + number);
     }
+    // ##### when called, this method can be used to manipulate data on TextView id "totalSingleShotsTeam1"
+    private void displayTotalSingleShotTeam1(int number){
+        TextView quantityTextView = findViewById(R.id.totalSingleShotsTeam1);
+        quantityTextView.setText("" + number);
+    }
+    // ##### when called, this method can be used to manipulate data on TextView id "totalDoubleShotsTeam1"
+    private void displayTotalDoubleShotTeam1(int number){
+        TextView quantityTextView = findViewById(R.id.totalDoubleShotsTeam1);
+        quantityTextView.setText("" + number);
+    }
+    // ##### when called, this method can be used to manipulate data on TextView id "totalTripleShotsTeam1"
+    private void displayTotalTripleShotTeam1(int number){
+        TextView quantityTextView = findViewById(R.id.totalTripleShotsTeam1);
+        quantityTextView.setText("" + number);
+    }
 
 
-
-
-
-
-
-
-
-
+// ##### TEAM 2 SECTION #####
 
     // SINGLE SHOTS TEAM 2
     public void increment1Team2(View view){
         display2(++totalPointsTeam2);
+        displayTotalSingleShotTeam2(++totalSingleShotsTeam2);
     }
-
     public void decrement1Team2(View view){
         if (totalPointsTeam2 <= 0){
             Toast.makeText(this, "You can not set less than 0 points.", Toast.LENGTH_SHORT).show();
         }else {
             display2(--totalPointsTeam2);
+            displayTotalSingleShotTeam2(--totalSingleShotsTeam2);
         }
-
     }
-
 
     // DOUBLE SHOTS TEAM 2
     public void increment2Team2(View view){
         display2(totalPointsTeam2 = totalPointsTeam2 + 2);
+        displayTotalDoubleShotTeam2(++totalDoubleShotsTeam2);
     }
     public void decrement2Team2(View view){
         if (totalPointsTeam2 <= -1){
             Toast.makeText(this, "You can not set less than 0 points.", Toast.LENGTH_SHORT).show();
         }else {
-            display1(totalPointsTeam2 = totalPointsTeam2 - 2);
+            display2(totalPointsTeam2 = totalPointsTeam2 - 2);
+            displayTotalDoubleShotTeam2(--totalDoubleShotsTeam2);
         }
     }
 
     // TRIPLE SHOTS TEAM 2
     public void increment3Team2(View view){
         display2(totalPointsTeam2 = totalPointsTeam2 + 3);
+        displayTotalTripleShotTeam2(++totalTripleShotsTeam2);
     }
     public void decrement3Team2(View view){
         if (totalPointsTeam2 <= -1){
             Toast.makeText(this, "You can not set less than 0 points.", Toast.LENGTH_SHORT).show();
         }else {
-            display1(totalPointsTeam2 = totalPointsTeam2 - 3);
+            display2(totalPointsTeam2 = totalPointsTeam2 - 3);
+            displayTotalTripleShotTeam2(--totalTripleShotsTeam2);
         }
     }
 
@@ -157,22 +190,87 @@ public class MatchControlActivity extends Activity {
         TextView quantityTextView = findViewById(R.id.totalFaultsTeam2);
         quantityTextView.setText("" + number);
     }
-
-
-
-
+    // when called, this method can be used to manipulate data on TextView id "totalSingleShotsTeam2"
+    private void displayTotalSingleShotTeam2(int number){
+        TextView quantityTextView = findViewById(R.id.totalSingleShotsTeam2);
+        quantityTextView.setText("" + number);
+    }
+    // when called, this method can be used to manipulate data on TextView id "totalDoubleShotsTeam2"
+    private void displayTotalDoubleShotTeam2(int number){
+        TextView quantityTextView = findViewById(R.id.totalDoubleShotsTeam2);
+        quantityTextView.setText("" + number);
+    }
+    // when called, this method can be used to manipulate data on TextView id "totalTripleShotsTeam2"
+    private void displayTotalTripleShotTeam2(int number){
+        TextView quantityTextView = findViewById(R.id.totalTripleShotsTeam2);
+        quantityTextView.setText("" + number);
+    }
 
     // setWinner method
     public void setWinnerTextView(View view){
-        if (totalPointsTeam1 < totalPointsTeam2){
-            // setText Winner Team 2
-        }else if (totalPointsTeam1 > totalPointsTeam1){
-            // setText Winner Team 1
-        }else{
-            // setText Message Draw
-        }
+
+            if (totalPointsTeam1 > totalPointsTeam2){
+                // setText Winner Team 1
+                trophy.setVisibility(View.VISIBLE);
+                displayWinner(team1);
+            }else if (totalPointsTeam1 < totalPointsTeam2){
+                // setText Winner Team 2
+                trophy.setVisibility(View.VISIBLE);
+                displayWinner(team2);
+            }else{
+                // setText Message Draw
+                displayWinner("The match is draw");
+                trophy.setVisibility(View.INVISIBLE);
+            }
+    }
+    // When called this method manipulates TExteView id "textViewWinner"
+    private void displayWinner(String message){
+        TextView winnerTextView = findViewById(R.id.textViewWinner);
+        winnerTextView.setText(message);
     }
 
+    // erase all data store in used variables
+    public void eraseAllData(View v){
 
+        totalSingleShotsTeam1 = 0;
+        displayTotalSingleShotTeam1(totalSingleShotsTeam1);
+
+        totalDoubleShotsTeam1 = 0;
+        displayTotalDoubleShotTeam1(totalDoubleShotsTeam1);
+
+        totalTripleShotsTeam1 = 0;
+        displayTotalTripleShotTeam1(totalTripleShotsTeam1);
+
+        totalFaultsTeam1 = 0;
+        displayFaults1(totalFaultsTeam1);
+
+        totalPointsTeam1 = 0;
+        display1(totalPointsTeam1);
+
+        totalSingleShotsTeam2 = 0;
+        displayTotalSingleShotTeam2(totalSingleShotsTeam2);
+
+        totalDoubleShotsTeam2 = 0;
+        displayTotalDoubleShotTeam2(totalDoubleShotsTeam2);
+
+        totalTripleShotsTeam2 = 0;
+        displayTotalTripleShotTeam2(totalTripleShotsTeam2);
+
+        totalFaultsTeam2 = 0;
+        displayFaults2(totalFaultsTeam2);
+
+        totalPointsTeam2 = 0;
+        display2(totalPointsTeam2);
+
+        // erase winner name store in variables team1 or team2
+        team1 = "";
+        displayWinner(team1);
+        team2 = "";
+        displayWinner(team2);
+
+        // hide trophy image
+        trophy.setVisibility(View.INVISIBLE);
+
+    }// close method eraseAllData
 
 }// close MatchControlActivity
