@@ -60,7 +60,8 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="+"/>
+                    android:text="+"
+                    android:onClick="increment1Team1"/>
                 <TextView
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
@@ -75,6 +76,7 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
+                    android:onClick="decrement1Team1"
                     android:text="-"/>
             </LinearLayout>
 
@@ -88,7 +90,8 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="+"/>
+                    android:text="+"
+                    android:onClick="increment2Team1"/>
                 <TextView
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
@@ -103,7 +106,8 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="-"/>
+                    android:text="-"
+                    android:onClick="decrement2Team1"/>
             </LinearLayout>
 
             <!-- POINT COUNT BLOCK START -->
@@ -116,7 +120,8 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="+"/>
+                    android:text="+"
+                    android:onClick="increment3Team1"/>
                 <TextView
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
@@ -131,7 +136,8 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="-"/>
+                    android:text="-"
+                    android:onClick="decrement3Team1"/>
             </LinearLayout>
 
             <!-- POINT COUNT BLOCK START -->
@@ -144,7 +150,8 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="+"/>
+                    android:text="+"
+                    android:onClick="incrementFaultTeam1"/>
                 <TextView
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
@@ -159,7 +166,8 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="-"/>
+                    android:text="-"
+                    android:onClick="decrementFaultTeam1"/>
             </LinearLayout>
 
         </LinearLayout>
@@ -197,7 +205,8 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="+"/>
+                    android:text="+"
+                    android:onClick="increment1Team2"/>
                 <TextView
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
@@ -212,7 +221,8 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="-"/>
+                    android:text="-"
+                    android:onClick="decrement1Team2"/>
             </LinearLayout>
 
             <!-- POINT COUNT BLOCK DOUBLE - START -->
@@ -225,7 +235,8 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="+"/>
+                    android:text="+"
+                    android:onClick="increment2Team2"/>
                 <TextView
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
@@ -240,7 +251,8 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="-"/>
+                    android:text="-"
+                    android:onClick="decrement2Team2"/>
             </LinearLayout>
 
             <!-- POINT COUNT BLOCK  TRIPLE - START -->
@@ -253,7 +265,8 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="+"/>
+                    android:text="+"
+                    android:onClick="increment3Team2"/>
                 <TextView
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
@@ -268,7 +281,8 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="-"/>
+                    android:text="-"
+                    android:onClick="decrement3Team2"/>
             </LinearLayout>
 
             <!-- POINT COUNT BLOCK FAULT - START -->
@@ -281,7 +295,8 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="+"/>
+                    android:text="+"
+                    android:onClick="incrementFaultTeam2"/>
                 <TextView
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
@@ -296,7 +311,8 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="-"/>
+                    android:text="-"
+                    android:onClick="decrementFaultTeam2"/>
             </LinearLayout>
             <!-- POINT COUNT BLOCK START -->
 
@@ -446,7 +462,7 @@
                     android:layout_height="20dp"
                     android:layout_gravity="center"
                     android:layout_marginBottom="8dp"
-                    android:drawableStart="@drawable/bra"
+                    android:drawableStart="@drawable/usa"
                     android:text=" USA"
                     android:textSize="16sp"
                     android:textStyle="bold"/>
@@ -517,7 +533,6 @@
             android:textStyle="bold"
             android:layout_marginRight="8dp"
             android:textColor="@color/colorAccent"/>
-
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -541,7 +556,8 @@
         android:layout_gravity="center"
         android:text=""
         android:textSize="24sp"
-        android:textStyle="bold"/>
+        android:textStyle="bold"
+        android:onClick="setWinnerTextView"/>
 
 </LinearLayout>
 <!-- CLOSE MAIN PAINEL -->
