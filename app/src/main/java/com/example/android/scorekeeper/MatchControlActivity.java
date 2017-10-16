@@ -8,7 +8,10 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import static android.icu.lang.UCharacter.GraphemeClusterBreak.T;
-
+/*
+Created by Jesse Lima 2017-10-16
+Package ready for delivery and review.
+ */
 public class MatchControlActivity extends Activity {
 
     String team1 = " BRA";
