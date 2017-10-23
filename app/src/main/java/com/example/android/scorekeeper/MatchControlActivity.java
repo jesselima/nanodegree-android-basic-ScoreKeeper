@@ -11,7 +11,7 @@ import static android.icu.lang.UCharacter.GraphemeClusterBreak.T;
 /*
 Created by Jesse Lima 2017-10-16
 Package ready for delivery and review.
- */
+*/
 public class MatchControlActivity extends Activity {
 
     // This teams name might change. I suppose this is to manage championships. So team names may comes from data bases and need to be stored into variables.
@@ -79,14 +79,18 @@ public class MatchControlActivity extends Activity {
             displayTotalDoubleShotTeam1(totalDoubleShotsTeam1 = 0);
             displayTotalTripleShotTeam1(totalTripleShotsTeam1 = 0);
             Toast.makeText(this, R.string.warning_less_than_zero_points, Toast.LENGTH_SHORT).show();
+
         } else if (totalPointsTeam1 == 1 ) {
                 display1(totalPointsTeam1 -= 1);
                 displayTotalDoubleShotTeam1(totalDoubleShotsTeam1 = 0);
+
         } else if (totalPointsTeam1 >= 2 && totalDoubleShotsTeam1 == 0) {
             display1(totalPointsTeam1 -= 2);
+
         } else if (totalPointsTeam1 >= 2){
             display1(totalPointsTeam1 -= 2);
             displayTotalDoubleShotTeam1(--totalDoubleShotsTeam1);
+
         }else if (totalDoubleShotsTeam1 == 0) {
             display1(totalPointsTeam1 -= 2);
         }
@@ -108,14 +112,21 @@ public class MatchControlActivity extends Activity {
             if (totalPointsTeam1 == 1 ) {
                 display1(totalPointsTeam1 -= 1);
                 displayTotalTripleShotTeam1(totalTripleShotsTeam1 = 0);
+
             } else if (totalPointsTeam1 == 2){
                 display1(totalPointsTeam1 -= 2);
                 displayTotalTripleShotTeam1(totalTripleShotsTeam1 = 0);
-            } else if(totalPointsTeam1 == 3){
-                    display1(totalPointsTeam1 -= 3);
-                    displayTotalTripleShotTeam1(--totalTripleShotsTeam1);
+
+            } else if(totalPointsTeam1 == 3 && totalTripleShotsTeam1 == 0) {
+                display1(totalPointsTeam1 -= 3);
+
+            } else if (totalPointsTeam1 == 3 && totalTripleShotsTeam1 == 1){
+                display1(totalPointsTeam1 -= 3);
+                displayTotalTripleShotTeam1(--totalTripleShotsTeam1);
+
             } else if (totalTripleShotsTeam1 == 0){
                 display1(totalPointsTeam1 -= 3);
+
             } else if (totalTripleShotsTeam1 >= 1) {
                 display1(totalPointsTeam1 -= 3);
                 displayTotalTripleShotTeam1(--totalTripleShotsTeam1);
@@ -201,14 +212,18 @@ public class MatchControlActivity extends Activity {
             displayTotalDoubleShotTeam2(totalDoubleShotsTeam2 = 0);
             displayTotalTripleShotTeam2(totalTripleShotsTeam2 = 0);
             Toast.makeText(this, R.string.warning_less_than_zero_points, Toast.LENGTH_SHORT).show();
+
         } else if (totalPointsTeam2 == 1 ) {
             display2(totalPointsTeam2 -= 1);
             displayTotalDoubleShotTeam2(totalDoubleShotsTeam2 = 0);
+
         } else if (totalPointsTeam2 >= 2 && totalDoubleShotsTeam2 == 0) {
             display2(totalPointsTeam2 -= 2);
+
         } else if (totalPointsTeam2 >= 2){
             display2(totalPointsTeam2 -= 2);
             displayTotalDoubleShotTeam2(--totalDoubleShotsTeam2);
+
         }else if (totalDoubleShotsTeam2 == 0) {
             display2(totalPointsTeam2 -= 2);
         }
@@ -230,14 +245,18 @@ public class MatchControlActivity extends Activity {
             if (totalPointsTeam2 == 1 ) {
                 display2(totalPointsTeam2 -= 1);
                 displayTotalTripleShotTeam2(totalTripleShotsTeam2 = 0);
+
             } else if (totalPointsTeam2 == 2){
                 display2(totalPointsTeam2 -= 2);
                 displayTotalTripleShotTeam2(totalTripleShotsTeam2 = 0);
+
             } else if(totalPointsTeam2 == 3){
                 display2(totalPointsTeam2 -= 3);
                 displayTotalTripleShotTeam2(--totalTripleShotsTeam2);
+
             } else if (totalTripleShotsTeam2 == 0){
                 display2(totalPointsTeam2 -= 3);
+
             } else if (totalTripleShotsTeam2 >= 1) {
                 display2(totalPointsTeam2 -= 3);
                 displayTotalTripleShotTeam2(--totalTripleShotsTeam2);
