@@ -51,44 +51,59 @@ public class MatchControlActivity extends Activity {
         Toast.makeText(this, getString(R.string.added_1_point) + team1, Toast.LENGTH_SHORT).show();
     }
     public void decrement1Team1(View view){
-        if (totalPointsTeam1 <= 0){
+        if (totalPointsTeam1 == 0 || totalPointsTeam1 <= -1){
             Toast.makeText(this, R.string.warning_less_than_zero_points, Toast.LENGTH_SHORT).show();
-        }else {
+        }
+        if (totalPointsTeam1 > 0) {
             display1(--totalPointsTeam1);
-            displayTotalSingleShotTeam1(--totalSingleShotsTeam1);
-            Toast.makeText(this, getString(R.string.subtracted_1_point) + team1, Toast.LENGTH_SHORT).show();
+            if (totalSingleShotsTeam1 >= 1){
+                displayTotalSingleShotTeam1(--totalSingleShotsTeam1);
+                Toast.makeText(this, getString(R.string.subtracted_1_point) + team1, Toast.LENGTH_SHORT).show();
+            }
+
         }
     }
 
     // DOUBLE SHOTS TEAM 1
     public void increment2Team1(View view){
-        display1(totalPointsTeam1 = totalPointsTeam1 + 2);
+        display1(totalPointsTeam1 += 2);
         displayTotalDoubleShotTeam1(++totalDoubleShotsTeam1);
         Toast.makeText(this, getString(R.string.added_2_points) + team1, Toast.LENGTH_SHORT).show();
     }
     public void decrement2Team1(View view){
-        if (totalPointsTeam1 <= -1){
+        if (totalPointsTeam1 <= 0){
             Toast.makeText(this, R.string.warning_less_than_zero_points, Toast.LENGTH_SHORT).show();
         }else {
-            display1(totalPointsTeam1 = totalPointsTeam1 - 2);
-            displayTotalDoubleShotTeam1(--totalDoubleShotsTeam1);
-            Toast.makeText(this, getString(R.string.subtracted_2_points) + team1, Toast.LENGTH_SHORT).show();
+            if (totalPointsTeam1 == 1 ) {
+                display1(totalPointsTeam1 -= 1);
+                displayTotalDoubleShotTeam1(totalDoubleShotsTeam1 = 0);
+            } else if (totalPointsTeam1 >= 2){
+                display1(totalPointsTeam1 -= 2);
+                displayTotalDoubleShotTeam1(totalDoubleShotsTeam1 = 0);
+            }
         }
     }
 
     // TRIPLE SHOTS TEAM 1
     public void increment3Team1(View view){
-        display1(totalPointsTeam1 = totalPointsTeam1 + 3);
+        display1(totalPointsTeam1 += 3);
         displayTotalTripleShotTeam1(++totalTripleShotsTeam1);
         Toast.makeText(this, getString(R.string.added_3_points) + team1, Toast.LENGTH_SHORT).show();
     }
     public void decrement3Team1(View view){
-        if (totalPointsTeam1 <= -1){
+        if (totalPointsTeam1 <= 0){
             Toast.makeText(this, R.string.warning_less_than_zero_points, Toast.LENGTH_SHORT).show();
         }else {
-            display1(totalPointsTeam1 = totalPointsTeam1 - 3);
-            displayTotalTripleShotTeam1(--totalTripleShotsTeam1);
-            Toast.makeText(this, getString(R.string.subtracted_3_points) + team1, Toast.LENGTH_SHORT).show();
+            if (totalPointsTeam1 == 1 ) {
+                display1(totalPointsTeam1 -= 1);
+                displayTotalTripleShotTeam1(totalTripleShotsTeam1 -= 1);
+            } else if (totalPointsTeam1 == 2){
+                display1(totalPointsTeam1 -= 2);
+                displayTotalTripleShotTeam1(totalTripleShotsTeam1 = 0);
+                }else {
+                    display1(totalPointsTeam1 -= 3);
+                    displayTotalTripleShotTeam1(totalTripleShotsTeam1 = 0);
+                }
         }
     }
 
@@ -134,7 +149,7 @@ public class MatchControlActivity extends Activity {
     }
 
 
-// ##### TEAM 2 SECTION #####
+    // ##### TEAM 2 SECTION #####
 
     // SINGLE SHOTS TEAM 2
     public void increment1Team2(View view){
@@ -143,44 +158,59 @@ public class MatchControlActivity extends Activity {
         Toast.makeText(this, getString(R.string.added_1_point) + team2, Toast.LENGTH_SHORT).show();
     }
     public void decrement1Team2(View view){
-        if (totalPointsTeam2 <= 0){
-            Toast.makeText(this,R.string.warning_less_than_zero_points, Toast.LENGTH_SHORT).show();
-        }else {
+        if (totalPointsTeam2 == 0 || totalPointsTeam2 <= -1){
+            Toast.makeText(this, R.string.warning_less_than_zero_points, Toast.LENGTH_SHORT).show();
+        }
+        if (totalPointsTeam2 > 0) {
             display2(--totalPointsTeam2);
-            displayTotalSingleShotTeam2(--totalSingleShotsTeam2);
-            Toast.makeText(this, getString(R.string.subtracted_1_point) + team2, Toast.LENGTH_SHORT).show();
+            if (totalSingleShotsTeam2 >= 1){
+                displayTotalSingleShotTeam2(--totalSingleShotsTeam2);
+                Toast.makeText(this, getString(R.string.subtracted_1_point) + team2, Toast.LENGTH_SHORT).show();
+            }
+
         }
     }
 
     // DOUBLE SHOTS TEAM 2
     public void increment2Team2(View view){
-        display2(totalPointsTeam2 = totalPointsTeam2 + 2);
+        display2(totalPointsTeam2 += 2);
         displayTotalDoubleShotTeam2(++totalDoubleShotsTeam2);
         Toast.makeText(this, getString(R.string.added_2_points) + team2, Toast.LENGTH_SHORT).show();
     }
     public void decrement2Team2(View view){
-        if (totalPointsTeam2 <= -1){
+        if (totalPointsTeam2 <= 0){
             Toast.makeText(this, R.string.warning_less_than_zero_points, Toast.LENGTH_SHORT).show();
         }else {
-            display2(totalPointsTeam2 = totalPointsTeam2 - 2);
-            displayTotalDoubleShotTeam2(--totalDoubleShotsTeam2);
-            Toast.makeText(this, getString(R.string.subtracted_2_points) + team2, Toast.LENGTH_SHORT).show();
+            if (totalPointsTeam2 == 1 ) {
+                display2(totalPointsTeam2 -= 1);
+                displayTotalDoubleShotTeam2(totalDoubleShotsTeam2 -= 0);
+            } else if (totalPointsTeam2 >= 2){
+                display2(totalPointsTeam2 -= 2);
+                displayTotalDoubleShotTeam2(totalDoubleShotsTeam2 = 0);
+            }
         }
     }
 
     // TRIPLE SHOTS TEAM 2
     public void increment3Team2(View view){
-        display2(totalPointsTeam2 = totalPointsTeam2 + 3);
+        display2(totalPointsTeam2 += 3);
         displayTotalTripleShotTeam2(++totalTripleShotsTeam2);
         Toast.makeText(this, getString(R.string.added_3_points) + team2, Toast.LENGTH_SHORT).show();
     }
     public void decrement3Team2(View view){
-        if (totalPointsTeam2 <= -1){
+        if (totalPointsTeam2 <= 0){
             Toast.makeText(this, R.string.warning_less_than_zero_points, Toast.LENGTH_SHORT).show();
         }else {
-            display2(totalPointsTeam2 = totalPointsTeam2 - 3);
-            displayTotalTripleShotTeam2(--totalTripleShotsTeam2);
-            Toast.makeText(this, getString(R.string.subtracted_3_points) + team2, Toast.LENGTH_SHORT).show();
+            if (totalPointsTeam2 == 1 ) {
+                display2(totalPointsTeam2 -= 1);
+                displayTotalTripleShotTeam2(totalTripleShotsTeam2 -= 1);
+            } else if (totalPointsTeam2 == 2){
+                display2(totalPointsTeam2 -= 2);
+                displayTotalTripleShotTeam2(totalTripleShotsTeam2 = 0);
+            }else {
+                display2(totalPointsTeam2 -= 3);
+                displayTotalTripleShotTeam2(totalTripleShotsTeam2 = 0);
+            }
         }
     }
 
@@ -283,8 +313,11 @@ public class MatchControlActivity extends Activity {
         // erase winner name store in variables team1 or team2
         team1 = "";
         displayWinner(team1);
+        team1 = "BRA";
+
         team2 = "";
         displayWinner(team2);
+        team2 = "USA";
 
         // hide trophy image
         trophy.setVisibility(View.INVISIBLE);

@@ -14,7 +14,7 @@
         android:layout_marginBottom="8dp"
         android:text="Pan-American Games"
         android:textAlignment="center"
-        android:textSize="24sp"
+        android:textSize="@dimen/text_size_headline"
         android:textStyle="bold"/>
     <TextView
         android:layout_width="match_parent"
@@ -22,7 +22,7 @@
         android:layout_marginBottom="8dp"
         android:text="Basketball - Men's - Final"
         android:textAlignment="center"
-        android:textSize="16sp"
+        android:textSize="@dimen/text_size_sub_heading"
         android:textStyle="bold"/>
 
     <!-- MAIN PAINEL -->
@@ -31,7 +31,6 @@
         android:layout_height="wrap_content"
         android:layout_margin="8dp"
         android:orientation="horizontal">
-
 
         <!-- PAINEL TEAM 1 - START #############-->
         <LinearLayout
@@ -47,7 +46,7 @@
             android:layout_gravity="center"
             android:drawableStart="@drawable/bra"
             android:text=" BRA"
-            android:textSize="16sp"
+            android:textSize="@dimen/text_size_sub_heading"
             android:textStyle="bold"/>
 
             <!-- POINT COUNT BLOCK START -->
@@ -68,9 +67,9 @@
                     android:layout_gravity="center_vertical"
                     android:layout_weight="1"
                     android:gravity="center_vertical"
-                    android:text="Single Shot"
+                    android:text="1 point"
                     android:textAlignment="center"
-                    android:textSize="12sp"/>
+                    android:textSize="@dimen/text_size_caption"/>
                 <Button
                     android:id="@+id/minus1ToTeam1"
                     android:layout_width="0dp"
@@ -98,9 +97,9 @@
                     android:layout_gravity="center_vertical"
                     android:layout_weight="1"
                     android:gravity="center_vertical"
-                    android:text="Double Shot"
+                    android:text="2 points"
                     android:textAlignment="center"
-                    android:textSize="12sp"/>
+                    android:textSize="@dimen/text_size_caption"/>
                 <Button
                     android:id="@+id/minus2ToTeam1"
                     android:layout_width="0dp"
@@ -128,9 +127,9 @@
                     android:layout_gravity="center_vertical"
                     android:layout_weight="1"
                     android:gravity="center_vertical"
-                    android:text="Triple Shot"
+                    android:text="3 points"
                     android:textAlignment="center"
-                    android:textSize="12sp"/>
+                    android:textSize="@dimen/text_size_caption"/>
                 <Button
                     android:id="@+id/minus3ToTeam1"
                     android:layout_width="0dp"
@@ -160,7 +159,7 @@
                     android:gravity="center_vertical"
                     android:text="Fault"
                     android:textAlignment="center"
-                    android:textSize="12sp"/>
+                    android:textSize="@dimen/text_size_caption"/>
                 <Button
                     android:id="@+id/minusFaultToTeam1"
                     android:layout_width="0dp"
@@ -192,7 +191,7 @@
                 android:layout_gravity="center"
                 android:drawableStart="@drawable/usa"
                 android:text=" USA"
-                android:textSize="16sp"
+                android:textSize="@dimen/text_size_sub_heading"
                 android:textStyle="bold"/>
 
             <!-- POINT COUNT BLOCK SINGLE - START -->
@@ -213,9 +212,9 @@
                     android:layout_gravity="center_vertical"
                     android:layout_weight="1"
                     android:gravity="center_vertical"
-                    android:text="Single Shot"
+                    android:text="1 point"
                     android:textAlignment="center"
-                    android:textSize="12sp"/>
+                    android:textSize="@dimen/text_size_caption"/>
                 <Button
                     android:id="@+id/minus1ToTeam2"
                     android:layout_width="0dp"
@@ -243,9 +242,9 @@
                     android:layout_gravity="center_vertical"
                     android:layout_weight="1"
                     android:gravity="center_vertical"
-                    android:text="Double Shot"
+                    android:text="2 points"
                     android:textAlignment="center"
-                    android:textSize="12sp"/>
+                    android:textSize="@dimen/text_size_caption"/>
                 <Button
                     android:id="@+id/minus2ToTeam2"
                     android:layout_width="0dp"
@@ -273,9 +272,9 @@
                     android:layout_gravity="center_vertical"
                     android:layout_weight="1"
                     android:gravity="center_vertical"
-                    android:text="Triple Shot"
+                    android:text="3 points"
                     android:textAlignment="center"
-                    android:textSize="12sp"/>
+                    android:textSize="@dimen/text_size_caption"/>
                 <Button
                     android:id="@+id/minus3ToTeam2"
                     android:layout_width="0dp"
@@ -305,7 +304,7 @@
                     android:gravity="center_vertical"
                     android:text="Fault"
                     android:textAlignment="center"
-                    android:textSize="12sp"/>
+                    android:textSize="@dimen/text_size_caption"/>
                 <Button
                     android:id="@+id/minusFaultToTeam2"
                     android:layout_width="0dp"
@@ -331,7 +330,7 @@
         android:gravity="bottom"
         android:text="Match Dashboard"
         android:textAlignment="center"
-        android:textSize="20sp"/>
+        android:textSize="@dimen/text_size_title"/>
 
     <!-- DASHBOARD MAIN PAINEL -->
     <LinearLayout
@@ -358,39 +357,39 @@
                     android:layout_height="20dp"
                     android:layout_marginBottom="4dp"
                     android:text="COUNTRY"
-                    android:textSize="16sp"
+                    android:textSize="@dimen/text_size_sub_heading"
                     android:textStyle="bold"/>
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="4dp"
                     android:text="TOTAL POINTS"
-                    android:textSize="16sp"
+                    android:textSize="@dimen/text_size_sub_heading"
                     android:textStyle="bold"/>
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="4dp"
                     android:text="Single Shots"
-                    android:textSize="16sp"/>
+                    android:textSize="@dimen/text_size_sub_heading"/>
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="4dp"
                     android:text="Double Shots"
-                    android:textSize="16sp"/>
+                    android:textSize="@dimen/text_size_sub_heading"/>
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="4dp"
                     android:text="Triple Shots"
-                    android:textSize="16sp"/>
+                    android:textSize="@dimen/text_size_sub_heading"/>
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="4dp"
                     android:text="Faults"
-                    android:textSize="16sp"/>
+                    android:textSize="@dimen/text_size_sub_heading"/>
             </LinearLayout>
 
             <!-- DASHBOARD TABLE - SUMARY TEAM 1 -->
@@ -406,7 +405,7 @@
                     android:layout_marginBottom="4dp"
                     android:drawableStart="@drawable/bra"
                     android:text=" BRA"
-                    android:textSize="16sp"
+                    android:textSize="@dimen/text_size_sub_heading"
                     android:textStyle="bold"/>
                 <TextView
                     android:id="@+id/totalPointsTeam1"
@@ -414,7 +413,7 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:text="0"
-                    android:textSize="24sp"
+                    android:textSize="@dimen/text_size_headline"
                     android:textStyle="bold"/>
                 <TextView
                     android:id="@+id/totalSingleShotsTeam1"
@@ -423,7 +422,7 @@
                     android:layout_gravity="center"
                     android:layout_marginBottom="4dp"
                     android:text="0"
-                    android:textSize="16sp"/>
+                    android:textSize="@dimen/text_size_sub_heading"/>
                 <TextView
                     android:id="@+id/totalDoubleShotsTeam1"
                     android:layout_width="wrap_content"
@@ -431,7 +430,7 @@
                     android:layout_gravity="center"
                     android:layout_marginBottom="4dp"
                     android:text="0"
-                    android:textSize="16sp"/>
+                    android:textSize="@dimen/text_size_sub_heading"/>
                 <TextView
                     android:id="@+id/totalTripleShotsTeam1"
                     android:layout_width="wrap_content"
@@ -439,7 +438,7 @@
                     android:layout_gravity="center"
                     android:layout_marginBottom="4dp"
                     android:text="0"
-                    android:textSize="16sp"/>
+                    android:textSize="@dimen/text_size_sub_heading"/>
                 <TextView
                     android:id="@+id/totalFaultsTeam1"
                     android:layout_width="wrap_content"
@@ -447,7 +446,7 @@
                     android:layout_gravity="center"
                     android:layout_marginBottom="4dp"
                     android:text="0"
-                    android:textSize="16sp"/>
+                    android:textSize="@dimen/text_size_sub_heading"/>
             </LinearLayout>
 
             <!-- DASHBOARD TABLE - SUMARY TEAM 2-->
@@ -463,7 +462,7 @@
                     android:layout_marginBottom="4dp"
                     android:drawableStart="@drawable/usa"
                     android:text=" USA"
-                    android:textSize="16sp"
+                    android:textSize="@dimen/text_size_sub_heading"
                     android:textStyle="bold"/>
                 <TextView
                     android:id="@+id/totalPointsTeam2"
@@ -471,7 +470,7 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:text="0"
-                    android:textSize="24sp"
+                    android:textSize="@dimen/text_size_headline"
                     android:textStyle="bold"/>
                 <TextView
                     android:id="@+id/totalSingleShotsTeam2"
@@ -480,7 +479,7 @@
                     android:layout_gravity="center"
                     android:layout_marginBottom="4dp"
                     android:text="0"
-                    android:textSize="16sp"/>
+                    android:textSize="@dimen/text_size_sub_heading"/>
                 <TextView
                     android:id="@+id/totalDoubleShotsTeam2"
                     android:layout_width="wrap_content"
@@ -488,7 +487,7 @@
                     android:layout_gravity="center"
                     android:layout_marginBottom="4dp"
                     android:text="0"
-                    android:textSize="16sp"/>
+                    android:textSize="@dimen/text_size_sub_heading"/>
                 <TextView
                     android:id="@+id/totalTripleShotsTeam2"
                     android:layout_width="wrap_content"
@@ -496,7 +495,7 @@
                     android:layout_gravity="center"
                     android:layout_marginBottom="4dp"
                     android:text="0"
-                    android:textSize="16sp"/>
+                    android:textSize="@dimen/text_size_sub_heading"/>
                 <TextView
                     android:id="@+id/totalFaultsTeam2"
                     android:layout_width="wrap_content"
@@ -504,7 +503,7 @@
                     android:layout_gravity="center"
                     android:layout_marginBottom="4dp"
                     android:text="0"
-                    android:textSize="16sp"/>
+                    android:textSize="@dimen/text_size_sub_heading"/>
 
             </LinearLayout>
         </LinearLayout>
@@ -516,7 +515,7 @@
         android:text="DANGER ZONE"
         android:textColor="@color/colorAccent"
         android:textStyle="bold"
-        android:textSize="20sp"
+        android:textSize="@dimen/text_size_sub_heading"
         android:layout_gravity="center"
         android:layout_marginTop="4dp"/>
 
@@ -529,6 +528,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="SET WINNER"
+            android:textSize="@dimen/text_size_sub_heading"
             android:textStyle="bold"
             android:layout_marginRight="8dp"
             android:textColor="@color/colorAccent"
@@ -538,6 +538,7 @@
             android:layout_height="wrap_content"
             android:text="RESET ALL DATA"
             android:textStyle="bold"
+            android:textSize="@dimen/text_size_sub_heading"
             android:layout_marginLeft="8dp"
             android:onClick="eraseAllData"
             android:textColor="@color/colorAccent"/>
@@ -550,7 +551,7 @@
         android:gravity="center">
         <ImageView
             android:id="@+id/imageViewtrophy"
-            android:layout_width="30dp"
+            android:layout_width="40dp"
             android:layout_height="40dp"
             android:src="@drawable/trophy"
             android:visibility="invisible"/>
@@ -560,7 +561,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:text=""
-            android:textSize="24sp"
+            android:textSize="@dimen/text_size_headline"
             android:textStyle="bold"
             android:onClick="setWinnerTextView"/>
     </LinearLayout>
