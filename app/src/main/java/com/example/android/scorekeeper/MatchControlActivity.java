@@ -14,22 +14,23 @@ Package ready for delivery and review.
  */
 public class MatchControlActivity extends Activity {
 
-    String team1 = " BRA";
-    String team2 = " USA";
+    // This teams name might change. I suppose this is to manage championships. So team names may comes from data bases and need to be stored into variables.
+    private String team1 = " BRA";
+    private String team2 = " USA";
 
-    int totalSingleShotsTeam1;
-    int totalDoubleShotsTeam1;
-    int totalTripleShotsTeam1;
-    int totalPointsTeam1;
-    int totalFaultsTeam1;
+    private int totalSingleShotsTeam1;
+    private int totalDoubleShotsTeam1;
+    private int totalTripleShotsTeam1;
+    private int totalPointsTeam1;
+    private int totalFaultsTeam1;
 
-    int totalSingleShotsTeam2;
-    int totalDoubleShotsTeam2;
-    int totalTripleShotsTeam2;
-    int totalPointsTeam2;
-    int totalFaultsTeam2;
+    private int totalSingleShotsTeam2;
+    private int totalDoubleShotsTeam2;
+    private int totalTripleShotsTeam2;
+    private int totalPointsTeam2;
+    private int totalFaultsTeam2;
 
-    ImageView trophy;
+    private ImageView trophy;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -60,7 +61,6 @@ public class MatchControlActivity extends Activity {
                 displayTotalSingleShotTeam1(--totalSingleShotsTeam1);
                 Toast.makeText(this, getString(R.string.subtracted_1_point) + team1, Toast.LENGTH_SHORT).show();
             }
-
         }
     }
 
@@ -73,15 +73,16 @@ public class MatchControlActivity extends Activity {
     public void decrement2Team1(View view){
         if (totalPointsTeam1 <= 0){
             Toast.makeText(this, R.string.warning_less_than_zero_points, Toast.LENGTH_SHORT).show();
-        }else {
-            if (totalPointsTeam1 == 1 ) {
+        } else if (totalPointsTeam1 == 1 ) {
                 display1(totalPointsTeam1 -= 1);
                 displayTotalDoubleShotTeam1(totalDoubleShotsTeam1 = 0);
-            } else if (totalPointsTeam1 >= 2){
+        } else if (totalPointsTeam1 == 2){
+            display1(totalPointsTeam1 -= 2);
+            displayTotalDoubleShotTeam1(--totalDoubleShotsTeam1);
+        } else if (totalDoubleShotsTeam1 == 0){
                 display1(totalPointsTeam1 -= 2);
-                displayTotalDoubleShotTeam1(totalDoubleShotsTeam1 = 0);
-            }
         }
+
     }
 
     // TRIPLE SHOTS TEAM 1
@@ -96,14 +97,16 @@ public class MatchControlActivity extends Activity {
         }else {
             if (totalPointsTeam1 == 1 ) {
                 display1(totalPointsTeam1 -= 1);
-                displayTotalTripleShotTeam1(totalTripleShotsTeam1 -= 1);
+                displayTotalTripleShotTeam1(totalTripleShotsTeam1 = 0);
             } else if (totalPointsTeam1 == 2){
                 display1(totalPointsTeam1 -= 2);
                 displayTotalTripleShotTeam1(totalTripleShotsTeam1 = 0);
-                }else {
+            } else if(totalPointsTeam1 == 3){
                     display1(totalPointsTeam1 -= 3);
-                    displayTotalTripleShotTeam1(totalTripleShotsTeam1 = 0);
-                }
+                    displayTotalTripleShotTeam1(--totalTripleShotsTeam1);
+            } else if (totalTripleShotsTeam1 == 0){
+                display1(totalPointsTeam1 -= 3);
+            }
         }
     }
 
@@ -167,7 +170,6 @@ public class MatchControlActivity extends Activity {
                 displayTotalSingleShotTeam2(--totalSingleShotsTeam2);
                 Toast.makeText(this, getString(R.string.subtracted_1_point) + team2, Toast.LENGTH_SHORT).show();
             }
-
         }
     }
 
@@ -180,14 +182,14 @@ public class MatchControlActivity extends Activity {
     public void decrement2Team2(View view){
         if (totalPointsTeam2 <= 0){
             Toast.makeText(this, R.string.warning_less_than_zero_points, Toast.LENGTH_SHORT).show();
-        }else {
-            if (totalPointsTeam2 == 1 ) {
-                display2(totalPointsTeam2 -= 1);
-                displayTotalDoubleShotTeam2(totalDoubleShotsTeam2 -= 0);
-            } else if (totalPointsTeam2 >= 2){
-                display2(totalPointsTeam2 -= 2);
-                displayTotalDoubleShotTeam2(totalDoubleShotsTeam2 = 0);
-            }
+        } else if (totalPointsTeam2 == 1 ) {
+            display2(totalPointsTeam2 -= 1);
+            displayTotalDoubleShotTeam2(totalDoubleShotsTeam2 = 0);
+        } else if (totalPointsTeam2 == 2){
+            display2(totalPointsTeam2 -= 2);
+            displayTotalDoubleShotTeam2(--totalDoubleShotsTeam2);
+        } else if (totalDoubleShotsTeam2 == 0){
+            display2(totalPointsTeam2 -= 2);
         }
     }
 
@@ -203,13 +205,15 @@ public class MatchControlActivity extends Activity {
         }else {
             if (totalPointsTeam2 == 1 ) {
                 display2(totalPointsTeam2 -= 1);
-                displayTotalTripleShotTeam2(totalTripleShotsTeam2 -= 1);
+                displayTotalTripleShotTeam2(totalTripleShotsTeam2 = 0);
             } else if (totalPointsTeam2 == 2){
                 display2(totalPointsTeam2 -= 2);
                 displayTotalTripleShotTeam2(totalTripleShotsTeam2 = 0);
-            }else {
+            } else if(totalPointsTeam2 == 3){
                 display2(totalPointsTeam2 -= 3);
-                displayTotalTripleShotTeam2(totalTripleShotsTeam2 = 0);
+                displayTotalTripleShotTeam2(--totalTripleShotsTeam2);
+            } else if (totalTripleShotsTeam2 == 0){
+                display2(totalPointsTeam2 -= 3);
             }
         }
     }
