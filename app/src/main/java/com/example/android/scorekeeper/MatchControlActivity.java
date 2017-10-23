@@ -11,6 +11,10 @@ import static android.icu.lang.UCharacter.GraphemeClusterBreak.T;
 /*
 Created by Jesse Lima 2017-10-16
 Package ready for delivery and review.
+
+THIS IS A FINAL COMMENT FOR RESUBMIT PROJECT. I HAVE MADE ALL RECOMMENDATIONS SUGGESTED AT THE FIRST REVIEW.
+IF SOMETHING STILL NEED TO CHANGE JUST TELL ME. I WILL WORK ON IT.
+
 */
 public class MatchControlActivity extends Activity {
 
