@@ -561,7 +561,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:text=""
-            android:textSize="@dimen/text_size_headline"
+            android:textSize="@dimen/text_size_display1"
             android:textStyle="bold"
             android:onClick="setWinnerTextView"/>
     </LinearLayout>
