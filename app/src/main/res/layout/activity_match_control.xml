@@ -1,7 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+<LinearLayout
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layout_margin="8dp"
@@ -12,7 +17,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
-        android:text="Pan-American Games"
+        android:text="@string/pan_american_games"
         android:textAlignment="center"
         android:textSize="@dimen/text_size_headline"
         android:textStyle="bold"/>
@@ -20,7 +25,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
-        android:text="Basketball - Men's - Final"
+        android:text="@string/basketball_men_s_final"
         android:textAlignment="center"
         android:textSize="@dimen/text_size_sub_heading"
         android:textStyle="bold"/>
@@ -67,7 +72,7 @@
                     android:layout_gravity="center_vertical"
                     android:layout_weight="1"
                     android:gravity="center_vertical"
-                    android:text="1 point"
+                    android:text="@string/_1_point"
                     android:textAlignment="center"
                     android:textSize="@dimen/text_size_caption"/>
                 <Button
@@ -97,7 +102,7 @@
                     android:layout_gravity="center_vertical"
                     android:layout_weight="1"
                     android:gravity="center_vertical"
-                    android:text="2 points"
+                    android:text="@string/_2_points"
                     android:textAlignment="center"
                     android:textSize="@dimen/text_size_caption"/>
                 <Button
@@ -127,7 +132,7 @@
                     android:layout_gravity="center_vertical"
                     android:layout_weight="1"
                     android:gravity="center_vertical"
-                    android:text="3 points"
+                    android:text="@string/_3_points"
                     android:textAlignment="center"
                     android:textSize="@dimen/text_size_caption"/>
                 <Button
@@ -157,7 +162,7 @@
                     android:layout_gravity="center_vertical"
                     android:layout_weight="1"
                     android:gravity="center_vertical"
-                    android:text="Fault"
+                    android:text="@string/fault"
                     android:textAlignment="center"
                     android:textSize="@dimen/text_size_caption"/>
                 <Button
@@ -212,7 +217,7 @@
                     android:layout_gravity="center_vertical"
                     android:layout_weight="1"
                     android:gravity="center_vertical"
-                    android:text="1 point"
+                    android:text="@string/_1_point"
                     android:textAlignment="center"
                     android:textSize="@dimen/text_size_caption"/>
                 <Button
@@ -242,7 +247,7 @@
                     android:layout_gravity="center_vertical"
                     android:layout_weight="1"
                     android:gravity="center_vertical"
-                    android:text="2 points"
+                    android:text="@string/_2_points"
                     android:textAlignment="center"
                     android:textSize="@dimen/text_size_caption"/>
                 <Button
@@ -272,7 +277,7 @@
                     android:layout_gravity="center_vertical"
                     android:layout_weight="1"
                     android:gravity="center_vertical"
-                    android:text="3 points"
+                    android:text="@string/_3_points"
                     android:textAlignment="center"
                     android:textSize="@dimen/text_size_caption"/>
                 <Button
@@ -302,7 +307,7 @@
                     android:layout_gravity="center_vertical"
                     android:layout_weight="1"
                     android:gravity="center_vertical"
-                    android:text="Fault"
+                    android:text="@string/fault"
                     android:textAlignment="center"
                     android:textSize="@dimen/text_size_caption"/>
                 <Button
@@ -328,7 +333,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="bottom"
-        android:text="Match Dashboard"
+        android:text="@string/match_dashboard"
         android:textAlignment="center"
         android:textSize="@dimen/text_size_title"/>
 
@@ -356,39 +361,39 @@
                     android:layout_width="wrap_content"
                     android:layout_height="20dp"
                     android:layout_marginBottom="4dp"
-                    android:text="COUNTRY"
+                    android:text="@string/country"
                     android:textSize="@dimen/text_size_sub_heading"
                     android:textStyle="bold"/>
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="4dp"
-                    android:text="TOTAL POINTS"
+                    android:text="@string/total_points"
                     android:textSize="@dimen/text_size_sub_heading"
                     android:textStyle="bold"/>
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="4dp"
-                    android:text="Single Shots"
+                    android:text="@string/single_shots"
                     android:textSize="@dimen/text_size_sub_heading"/>
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="4dp"
-                    android:text="Double Shots"
+                    android:text="@string/double_shots"
                     android:textSize="@dimen/text_size_sub_heading"/>
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="4dp"
-                    android:text="Triple Shots"
+                    android:text="@string/triple_shots"
                     android:textSize="@dimen/text_size_sub_heading"/>
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="4dp"
-                    android:text="Faults"
+                    android:text="@string/faults"
                     android:textSize="@dimen/text_size_sub_heading"/>
             </LinearLayout>
 
@@ -512,12 +517,13 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="DANGER ZONE"
+        android:text="@string/danger_zone"
         android:textColor="@color/colorAccent"
         android:textStyle="bold"
         android:textSize="@dimen/text_size_sub_heading"
         android:layout_gravity="center"
-        android:layout_marginTop="4dp"/>
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="@dimen/line_margin_bottom"/>
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -527,7 +533,7 @@
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="SET WINNER"
+            android:text="@string/set_winner"
             android:textSize="@dimen/text_size_sub_heading"
             android:textStyle="bold"
             android:layout_marginRight="8dp"
@@ -536,7 +542,7 @@
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="RESET ALL DATA"
+            android:text="@string/reset_all_data"
             android:textStyle="bold"
             android:textSize="@dimen/text_size_sub_heading"
             android:layout_marginLeft="8dp"
@@ -566,7 +572,11 @@
             android:onClick="setWinnerTextView"/>
     </LinearLayout>
 
+
+
 </LinearLayout>
 <!-- CLOSE MAIN PAINEL -->
+
+</ScrollView>
 
 

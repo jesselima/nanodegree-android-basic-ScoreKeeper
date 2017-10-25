@@ -145,28 +145,28 @@ public class MatchControlActivity extends Activity {
     // ##### when called, this method can be used to manipulate data on TextView id "totalPointsTeam1"
     private void display1(int number){
         TextView quantityTextView = findViewById(R.id.totalPointsTeam1);
-        quantityTextView.setText("" + number);
+        quantityTextView.setText(String.valueOf(number));
     }
 
     // ##### when called, this method can be used to manipulate data on TextView id "totalFaultsTeam1"
     private void displayFaults1(int number){
         TextView quantityTextView = findViewById(R.id.totalFaultsTeam1);
-        quantityTextView.setText("" + number);
+        quantityTextView.setText(String.valueOf(number));
     }
     // ##### when called, this method can be used to manipulate data on TextView id "totalSingleShotsTeam1"
     private void displayTotalSingleShotTeam1(int number){
         TextView quantityTextView = findViewById(R.id.totalSingleShotsTeam1);
-        quantityTextView.setText("" + number);
+        quantityTextView.setText(String.valueOf(number));
     }
     // ##### when called, this method can be used to manipulate data on TextView id "totalDoubleShotsTeam1"
     private void displayTotalDoubleShotTeam1(int number){
         TextView quantityTextView = findViewById(R.id.totalDoubleShotsTeam1);
-        quantityTextView.setText("" + number);
+        quantityTextView.setText(String.valueOf(number));
     }
     // ##### when called, this method can be used to manipulate data on TextView id "totalTripleShotsTeam1"
     private void displayTotalTripleShotTeam1(int number){
         TextView quantityTextView = findViewById(R.id.totalTripleShotsTeam1);
-        quantityTextView.setText("" + number);
+        quantityTextView.setText(String.valueOf(number));
     }
 
 
@@ -272,27 +272,27 @@ public class MatchControlActivity extends Activity {
     // when called, this method can be used to manipulate data on TextView id "totalPointsTeam2"
     private void display2(int number){
         TextView quantityTextView = findViewById(R.id.totalPointsTeam2);
-        quantityTextView.setText("" + number);
+        quantityTextView.setText(String.valueOf(number));
     }
     // when called, this method can be used to manipulate data on TextView id "totalFaultsTeam2"
     private void displayFaults2(int number){
         TextView quantityTextView = findViewById(R.id.totalFaultsTeam2);
-        quantityTextView.setText("" + number);
+        quantityTextView.setText(String.valueOf(number));
     }
     // when called, this method can be used to manipulate data on TextView id "totalSingleShotsTeam2"
     private void displayTotalSingleShotTeam2(int number){
         TextView quantityTextView = findViewById(R.id.totalSingleShotsTeam2);
-        quantityTextView.setText("" + number);
+        quantityTextView.setText(String.valueOf(number));
     }
     // when called, this method can be used to manipulate data on TextView id "totalDoubleShotsTeam2"
     private void displayTotalDoubleShotTeam2(int number){
         TextView quantityTextView = findViewById(R.id.totalDoubleShotsTeam2);
-        quantityTextView.setText("" + number);
+        quantityTextView.setText(String.valueOf(number));
     }
     // when called, this method can be used to manipulate data on TextView id "totalTripleShotsTeam2"
     private void displayTotalTripleShotTeam2(int number){
         TextView quantityTextView = findViewById(R.id.totalTripleShotsTeam2);
-        quantityTextView.setText("" + number);
+        quantityTextView.setText(String.valueOf(number));
     }
 
     // setWinner method

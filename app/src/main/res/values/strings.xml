@@ -12,5 +12,21 @@
     <string name="added_1_fault">You added 1 fault to  </string>
     <string name="subtracted_1_fault">You subtracted 1 fault to  </string>
     <string name="all_data_erased">You erased all data!</string>
+    <string name="pan_american_games">Pan-American Games</string>
+    <string name="basketball_men_s_final">Basketball - Men\'s - Final</string>
+    <string name="fault">Fault</string>
+    <string name="_1_point">1 point</string>
+    <string name="_2_points">2 points</string>
+    <string name="_3_points">3 points</string>
+    <string name="match_dashboard">Match Dashboard</string>
+    <string name="country">COUNTRY</string>
+    <string name="total_points">TOTAL POINTS</string>
+    <string name="single_shots">Single Shots</string>
+    <string name="double_shots">Double Shots</string>
+    <string name="triple_shots">Triple Shots</string>
+    <string name="faults">Faults</string>
+    <string name="set_winner">SET WINNER</string>
+    <string name="reset_all_data">RESET ALL DATA</string>
+    <string name="danger_zone">DANGER ZONE</string>
 
 </resources>
